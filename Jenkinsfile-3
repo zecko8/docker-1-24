@@ -3,10 +3,12 @@ pipeline {
 	  stages {
 	    stage('Test') {
 	      steps {
-	        sh 'nginx -v'
-                sh 'hostname'
-		sh 'pwd'
-		sh 'ls'
+	        sh '''
+		nginx -v'
+                hostname
+		pwd
+		ls /
+		'''
 	      }
 	    }
 	  }
