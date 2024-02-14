@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Cont1') {
       agent {
-        docker.image('nginx').withRun('-p 8080:80')
+        docker {image 'nginx'}
       }
       steps {
         sh 'nginx -v'
