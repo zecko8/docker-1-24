@@ -13,7 +13,7 @@ pipeline {
       agent any
       steps {
         sh 'hostname'
-        sh 'docker run -d --name nginx-jenkins -p 8080:80 nginx'
+        sh 'docker run -d --name nginx-jenkins -p 8081:80 nginx'
       }
     }
   }
