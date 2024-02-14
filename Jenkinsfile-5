@@ -1,0 +1,20 @@
+pipeline {
+  agent none
+  stages {
+    stage ('TEST') {
+      agent {
+        docker {image 'nginx'}
+      }
+      steps {
+        sh 'nginx -v'
+      }
+    }
+    stage ('RUN') {
+      agent any
+      steps {
+        sh 'hostname'
+        sh 'docker run -d --name nginx-jenkins -p 8080:80 nginx'
+      }
+    }
+  }
+}
