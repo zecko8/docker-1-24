@@ -1,3 +1,3 @@
-FROM nginx
+FROM python
 
-RUN touch file1
+COPY app1.py /data/app1.py
