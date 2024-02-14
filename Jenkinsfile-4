@@ -1,0 +1,10 @@
+pipeline {
+	  agent { dockerfile true }
+	  stages {
+	    stage('RUN') {
+	      steps {
+	        sh 'python /data/app1.py'
+		}
+	    }
+	  }
+	}
