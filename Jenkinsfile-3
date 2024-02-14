@@ -6,7 +6,9 @@ pipeline {
 	    stage('Test') {
 	      steps {
 	        sh 'nginx -v'
-          sh 'hostname'
+                sh 'hostname'
+		sh 'pwd'
+		sh 'ls'
 	      }
 	    }
 	  }
